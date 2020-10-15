@@ -48,30 +48,46 @@
             grid-gap: 10px;
         }
 
+        .overlay {
+            border: 1px solid green;
+        }
 
         .gallery li .overlay {
-            width: 0;
+            width: 100%;
             height: 0;
             background-color: rgba(0, 0, 0, 0);
             position: fixed;
-            top: 0;
+            bottom: 0;
             left: 0;
+            right: 0;
             z-index: 333;
-            padding-top: 170px;
+            padding-top: 150px;
+            transition: .7s;
         }
 
         .gallery li .overlay img {
             width: 0;
+            background-color: #fff;
             box-shadow: 2px 2px 7px rgba(31, 28, 28, 0.6);
+            transition: .7s;
+            padding: 10px 5px 20px 5px;
+            box-sizing: border-box;
+        }
+
+        .gallery li .overlay a {
+            display: block;
+            font-weight: bold;
+            font-size: 10px;
+            color: white;
+            margin-top: 10px;
+            z-index: 100000;
         }
 
         .gallery li .overlay:target {
-            width: auto;
+            width: 100%;
             height: 100vh;
             background-color: rgba(0, 0, 0, 0.3);
-            border: 2px solid green;
-            bottom: 0;
-            right: 0;
+            top: 0;
         }
 
         .gallery li .overlay:target img {
@@ -86,6 +102,7 @@
             
             }
         }
+
 
         /* Mobile */
         @media screen and ( max-width: 576px ) {
@@ -111,61 +128,107 @@
 
             <div class="overlay" id="img-1">
                 <img src="img/1.jpg">
+                <a href="index.html#" class="text-danger">CLOSE</a>
             </div>
         </li>
 
         <li>
-            <a href="">
+            <a href="#img-2">
                 <img src="img/2.jpg" alt="">
             </a>
+
+            <!-- <div class="overlay" id="img-2">
+                <img src="img/2.jpg">
+                <a href="#">CLOSE</a>
+            </div> -->
         </li>
 
         <li>
-            <a href="">
+            <a href="#img-3">
                 <img src="img/3.jpg" alt="">
             </a>
+
+            <!-- <div class="overlay" id="img-3">
+                <img src="img/3.jpg">
+                <a href="#">CLOSE</a>
+            </div> -->
         </li>
 
         <li>
-            <a href="">
+            <a href="#img-4">
                 <img src="img/4.jpg" alt="">
             </a>
+
+            <!-- <div class="overlay" id="img-4">
+                <img src="img/4.jpg">
+                <a href="#">CLOSE</a>
+            </div> -->
         </li>
 
         <li>
-            <a href="">
+            <a href="#img-5">
                 <img src="img/5.jpg" alt="">
             </a>
+<!-- 
+            <div class="overlay" id="img-5">
+                <img src="img/5.jpg">
+                <a href="#">CLOSE</a>
+            </div> -->
         </li>
 
         <li>
-            <a href="">
+            <a href="#img-6">
                 <img src="img/6.jpg" alt="">
             </a>
+<!-- 
+            <div class="overlay" id="img-6">
+                <img src="img/6.jpg">
+                <a href="#">CLOSE</a>
+            </div> -->
         </li>
 
         <li>
-            <a href="">
+            <a href="#img-7">
                 <img src="img/7.jpg" alt="">
             </a>
+
+            <!-- <div class="overlay" id="img-7">
+                <img src="img/7.jpg">
+                <a href="#">CLOSE</a>
+            </div> -->
         </li>
 
         <li>
-            <a href="">
+            <a href="#img-8">
                 <img src="img/8.jpg" alt="">
             </a>
+
+            <div class="overlay" id="img-8">
+                <img src="img/8.jpg">
+                <a href="#">CLOSE</a>
+            </div>
         </li>
 
         <li>
-            <a href="">
+            <a href="#img-9">
                 <img src="img/9.jpg" alt="">
             </a>
+
+            <!-- <div class="overlay" id="img-9">
+                <img src="img/9.jpg">
+                <a href="#">CLOSE</a>
+            </div> -->
         </li>
 
         <li>
-            <a href="">
+            <a href="#img-10">
                 <img src="img/10.jpg" alt="">
             </a>
+
+            <div class="overlay" id="img-10">
+                <img src="img/10.jpg">
+                <a href="#">CLOSE</a>
+            </div>
         </li>
     </ul>
 
