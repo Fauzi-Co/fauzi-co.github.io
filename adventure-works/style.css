@@ -1,0 +1,154 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: arial;
+}
+
+body {
+	background-color: #e7e7e7;
+	line-height: 1.5;
+	background-image: url(img/bgc.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: white;
+	color: white;
+	padding: 10px 20px 10px 20px;
+	box-shadow: 0 5px 10px rgba(1, 1, 1, .2);
+}
+
+header .header {
+	width: 70%;
+	margin: 0 auto;
+}
+
+header h2 {
+	text-shadow: 0px 0px 0px black;
+	/*text-shadow: 2px 2px 5px rgba(49, 183, 38, 0.6);*/
+	font-style: italic;
+	margin-bottom: 5px;
+	padding-left: 10px;
+	color: rgb(49, 183, 38);
+}
+
+main {
+	width: 70%;
+	margin: 50px auto;
+	padding: 30px 5px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 25px;
+	/*background-color: #e7e7e7;*/
+}
+
+main p {
+	font-size: 12px;
+}
+
+main div {
+	box-sizing: border-box;
+}
+
+main .left {
+	/*display: flex;
+	flex-direction: column;*/
+	text-align: center;
+	padding-top: 30px;
+}
+
+main .left div,
+main .center div {
+	width: 90%;
+	margin: 0 auto;
+}
+
+main .left div img, main .center div img {
+	width: 100%;
+	margin-bottom: 10px;
+	border: 6px solid white;
+	box-sizing: border-box;
+}
+
+main .left h3.box {
+	background-color: rgb(49, 183, 38);
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	box-sizing: border-box;
+	padding: 7px;
+	color: white;
+}
+
+main .left h3 {
+	color: rgb(49, 183, 38);
+	margin-bottom: 20px;
+}
+
+main .left hr {
+	border-top: 2px solid rgb(49, 183, 38);
+	margin-bottom: 20px;
+}
+
+main .center h3 {
+	color: rgb(49, 183, 38);
+	margin-bottom: 5px;
+}
+
+main .center p {
+	margin-bottom: 20px;
+}
+
+main .right {
+	text-align: center;
+	padding-top: 10px;
+}
+main .right h3 {
+	color: #ffba00;
+	margin-bottom: 5px;
+}
+
+main .right hr {
+	border-top: 3px solid black;
+	margin-bottom: 20px;
+}
+
+main .right p.box {
+	padding: 20px 10px;
+	background-color: #ffba00;
+	border: 2px solid white;
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+
+
+
+/* responsive */
+@media screen and (max-width: 800px) {
+	main {
+		grid-template-columns: 1fr 1fr;
+		width: 80%;
+		grid-row-gap: 10px;
+	}
+
+	header .header {
+	width: 85%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	main {
+		width: 90%;
+		grid-template-columns: 1fr;
+		grid-row-gap: 10px;
+	}
+
+	header .header {
+	width: 90%;
+	}
+}
