@@ -21,6 +21,7 @@ header {
 	color: white;
 	padding: 10px 20px 10px 20px;
 	box-shadow: 0 5px 10px rgba(1, 1, 1, .2);
+	z-index: 9999;
 }
 
 header .header {
@@ -60,7 +61,7 @@ main .left {
 	flex-direction: column;*/
 	text-align: center;
 	padding-top: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 main .left div,
@@ -74,6 +75,16 @@ main .left div img, main .center div img {
 	margin-bottom: 10px;
 	border: 6px solid white;
 	box-sizing: border-box;
+	box-shadow: 0 2px 10px rgba(1, 1, 1, .2);
+
+}
+
+main .left div img:nth-child(1) {
+	transform: rotate(-2deg);
+}
+
+main .left div img:nth-child(2) {
+	transform: rotate(2deg);
 }
 
 main .left h3.box {
@@ -94,6 +105,7 @@ main .left h3 {
 main .left hr {
 	border-top: 2px solid rgb(49, 183, 38);
 	margin-bottom: 20px;
+	margin-top: 5px;
 }
 
 main .center h3 {
@@ -112,6 +124,7 @@ main .right {
 main .right h3 {
 	color: #ffba00;
 	margin-bottom: 5px;
+	font-style: italic;
 }
 
 main .right hr {
@@ -124,6 +137,7 @@ main .right p.box {
 	background-color: #ffba00;
 	border: 2px solid white;
 	margin-bottom: 20px;
+	box-shadow: 0 2px 10px rgba(1, 1, 1, .2);
 	font-size: 15px;
 }
 
