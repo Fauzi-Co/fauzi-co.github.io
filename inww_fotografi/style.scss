@@ -51,13 +51,14 @@ button:focus {
 
 .jumbotron {
   min-height: 100vh;
-  background-color: #f7f7f7;
+  background-color: #f7f7f7 !important;
 
   .text {
     // flex: 0.8;
     flex-direction: column;
     justify-content: center;
     p {
+      font-size: 1.1em;
       width: 95%;
       font-weight: 200;
     }
