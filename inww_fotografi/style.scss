@@ -16,17 +16,8 @@ button:focus {
 }
 
 .navbar-drop {
-  // transition: 0.7s;
   transition: 0.5s;
-  // opacity: 0;
-  // margin-top: -70px;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-}
-
-.navbar-drop.drop {
-  // opacity: 1;
-  // margin-top: 0px;
-  // box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
 .navbar {
@@ -59,8 +50,7 @@ button:focus {
 }
 
 .jumbotron {
-  min-height: 90vmin;
-  // background-color: hsl(23, 18%, 98%);
+  min-height: 100vh;
   background-color: #f7f7f7;
 
   .text {

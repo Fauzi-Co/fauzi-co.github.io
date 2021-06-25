@@ -49,7 +49,7 @@ button:focus {
 }
 
 .jumbotron {
-  min-height: 90vmin;
+  min-height: 100vh;
   background-color: #f7f7f7;
 }
 
