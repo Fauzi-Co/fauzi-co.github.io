@@ -60,6 +60,11 @@ button:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transform: translateX(-40px);
+          transform: translateX(-40px);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  opacity: 0;
 }
 
 .jumbotron .text p {
@@ -72,6 +77,12 @@ button:focus {
   color: #fff;
 }
 
+.jumbotron .text.animate {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
 .jumbotron .pic {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -80,6 +91,17 @@ button:focus {
 
 .jumbotron .pic img {
   width: 100%;
+  -webkit-transition: 0.8s 0.3s;
+  transition: 0.8s 0.3s;
+  opacity: 0;
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+}
+
+.jumbotron .pic img.animate {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 section.galery .container {
