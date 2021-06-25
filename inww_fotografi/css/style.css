@@ -223,7 +223,7 @@ section.full {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  background-image: url("../assets/img/service-lg.jpg");
+  background-image: url("/assets/img/service-lg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -327,7 +327,7 @@ footer P {
     width: 100%;
   }
   section.full {
-    background-image: url("../assets/img/service-md.jpg");
+    background-image: url("/assets/img/service-md.jpg");
   }
   footer {
     min-height: 350px !important;
@@ -456,7 +456,7 @@ footer P {
     margin-bottom: 30px;
   }
   section.full {
-    background-image: url("../assets/img/service-sm.jpg");
+    background-image: url("/assets/img/service-sm.jpg");
   }
   section.full h3 {
     font-size: 1.2em;
