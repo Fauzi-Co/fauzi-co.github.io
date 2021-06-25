@@ -199,7 +199,7 @@ section.full {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-image: url("/assets/img/service-lg.jpg");
+  background-image: url("../assets/img/service-lg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -316,7 +316,7 @@ footer {
   }
 
   section.full {
-    background-image: url("/assets/img/service-md.jpg");
+    background-image: url("../assets/img/service-md.jpg");
   }
 
   footer {
@@ -467,7 +467,7 @@ footer {
   }
 
   section.full {
-    background-image: url("/assets/img/service-sm.jpg");
+    background-image: url("../assets/img/service-sm.jpg");
 
     h3 {
       font-size: 1.2em;
