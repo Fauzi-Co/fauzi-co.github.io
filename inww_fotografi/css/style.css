@@ -303,7 +303,7 @@ section.service .col-md-6 .text p {
 }
 
 section.about .container .box {
-  width: 70% !important;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -426,6 +426,9 @@ footer P {
   }
   section.galery .row .col-3 .img-2 img {
     width: 100%;
+  }
+  section.about .container .box {
+    width: 90%;
   }
   section.full {
     background-image: url("../assets/img/service-md.jpg");
@@ -556,6 +559,12 @@ footer P {
     font-size: 0.9em !important;
     font-weight: 200;
     margin-bottom: 30px;
+  }
+  section.about .container .box {
+    width: 100%;
+  }
+  section.about .container .box .ratio-4x3 {
+    --bs-aspect-ratio: 100% !important;
   }
   section.full {
     background-image: url("../assets/img/service-sm.jpg");
