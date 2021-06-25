@@ -250,6 +250,18 @@ section.service {
   }
 }
 
+section.about {
+  .container {
+    .box {
+      h3 {
+        text-align: center;
+      }
+      width: 70% !important;
+      margin: 0 auto;
+    }
+  }
+}
+
 section.full {
   height: 350px;
   display: flex;

@@ -302,6 +302,15 @@ section.service .col-md-6 .text p {
   margin-bottom: 30px;
 }
 
+section.about .container .box {
+  width: 70% !important;
+  margin: 0 auto;
+}
+
+section.about .container .box h3 {
+  text-align: center;
+}
+
 section.full {
   height: 350px;
   display: -webkit-box;
