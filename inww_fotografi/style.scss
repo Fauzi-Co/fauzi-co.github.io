@@ -3,6 +3,14 @@
   overflow: $of;
 }
 
+@mixin translateX($x) {
+  transform: translateX($x);
+}
+
+@mixin translateY($y) {
+  transform: translateY($y);
+}
+
 button {
   color: #fff !important;
 }
@@ -94,59 +102,110 @@ button:focus {
 section.galery {
   .container {
     max-width: 70vmax !important;
-  }
+    .row {
+      h3 {
+        transition: 0.9s;
+        opacity: 0;
+      }
 
-  .row {
-    .col {
-    }
-    .col-1 {
-      flex: 0.9;
+      h3.animate {
+        opacity: 1;
+      }
 
-      .img-1 {
-        @include lebarGambar(auto, hidden);
-        img {
-          width: 100%;
+      .col-1 {
+        flex: 0.9;
+
+        .img-1 {
+          @include translateX(-40px);
+          opacity: 0;
+          transition: 0.7s;
+          @include lebarGambar(auto, hidden);
+          img {
+            width: 100%;
+          }
+        }
+        .img-1.animate {
+          @include translateX(0px);
+          opacity: 1;
+        }
+
+        .img-2 {
+          @include translateX(-40px);
+          opacity: 0;
+          transition: 0.7s 2.5s;
+          @include lebarGambar(auto, hidden);
+          img {
+            width: 100%;
+          }
+        }
+
+        .img-2.animate {
+          @include translateX(0);
+          opacity: 1;
         }
       }
 
-      .img-2 {
-        @include lebarGambar(auto, hidden);
-        img {
-          width: 100%;
+      .col-2 {
+        flex: 1.4;
+        .img-1 {
+          @include translateY(-40px);
+          opacity: 0;
+          transition: 0.7s 0.5s;
+          @include lebarGambar(auto, hidden);
+          img {
+            width: 100%;
+          }
         }
-      }
-    }
-
-    .col-2 {
-      flex: 1.4;
-      .img-1 {
-        @include lebarGambar(auto, hidden);
-        img {
-          width: 100%;
+        .img-1.animate {
+          @include translateX(0);
+          opacity: 1;
         }
-      }
 
-      .img-2 {
-        @include lebarGambar(auto, hidden);
-        img {
-          width: 100%;
+        .img-2 {
+          @include translateY(40px);
+          opacity: 0;
+          transition: 0.7s 2s;
+          @include lebarGambar(auto, hidden);
+          img {
+            width: 100%;
+          }
         }
-      }
-    }
 
-    .col-3 {
-      flex: 0.7;
-      .img-1 {
-        @include lebarGambar(auto, hidden);
-        img {
-          width: 100%;
+        .img-2.animate {
+          @include translateY(0);
+          opacity: 1;
         }
       }
 
-      .img-2 {
-        @include lebarGambar(auto, hidden);
-        img {
-          width: 100%;
+      .col-3 {
+        flex: 0.7;
+        .img-1 {
+          @include translateX(40px);
+          opacity: 0;
+          transition: 0.7s 1s;
+          @include lebarGambar(auto, hidden);
+          img {
+            width: 100%;
+          }
+        }
+
+        .img-1.animate {
+          @include translateX(0);
+          opacity: 1;
+        }
+
+        .img-2 {
+          @include translateX(40px);
+          opacity: 0;
+          transition: 0.7s 1.5s;
+          @include lebarGambar(auto, hidden);
+          img {
+            width: 100%;
+          }
+        }
+        .img-2.animate {
+          @include translateX(0px);
+          opacity: 1;
         }
       }
     }
