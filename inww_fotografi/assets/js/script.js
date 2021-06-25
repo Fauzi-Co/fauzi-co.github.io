@@ -15,9 +15,9 @@ window.addEventListener("load", () => {
 });
 
 document.addEventListener("scroll", () => {
-  if (window.scrollY > 30) {
+  if (window.scrollY > 20) {
     navDrop.classList.add("shadow");
-  } else if (window.scrollY < 30) {
+  } else if (window.scrollY < 20) {
     navDrop.classList.remove("shadow");
   }
 
@@ -29,7 +29,7 @@ document.addEventListener("scroll", () => {
     col_3_Img2.classList.add("animate");
     col_2_Img2.classList.add("animate");
     col_1_Img2.classList.add("animate");
-  } else if (window.scrollY < 450) {
+  } else if (window.scrollY < 250) {
     galeryH3.classList.remove("animate");
     col_1_Img1.classList.remove("animate");
     col_2_Img1.classList.remove("animate");
