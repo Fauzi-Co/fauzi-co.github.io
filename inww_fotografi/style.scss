@@ -1,0 +1,518 @@
+@mixin lebarGambar($height, $of) {
+  height: $height;
+  overflow: $of;
+}
+
+button {
+  color: #fff;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-drop {
+  // transition: 0.7s;
+  transition: 0.5s;
+  // opacity: 0;
+  // margin-top: -70px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.navbar-drop.drop {
+  // opacity: 1;
+  // margin-top: 0px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.navbar {
+  .navbar-brand {
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  .navbar-toggler,
+  .navbar-toggler:focus {
+    transition: 0.8s;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .navbar-toggler:active {
+    transform: scale(0.8);
+  }
+
+  .navbar-toggler-icon {
+    height: 1.2em;
+    width: 1.2em;
+  }
+
+  .nav-link {
+    margin-left: 10px;
+    letter-spacing: 1px;
+  }
+}
+
+.jumbotron {
+  min-height: 90vmin;
+  background-color: hsl(23, 18%, 98%);
+
+  .text {
+    // flex: 0.8;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      width: 95%;
+      font-weight: 200;
+    }
+
+    button {
+      color: #fff;
+    }
+  }
+
+  .pic {
+    // flex: 1.2;
+    justify-content: flex-end;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+section.galery {
+  // box-shadow: inset 0em -0.3em 0.3em rgba(0, 0, 0, 0.4);
+  // box-shadow: 0 .5rem 1rem rgb(0, 0, 0) !important;
+
+  .container {
+    max-width: 70vmax !important;
+  }
+
+  .row {
+    .col {
+    }
+    .col-1 {
+      flex: 0.9;
+
+      .img-1 {
+        @include lebarGambar(auto, hidden);
+        img {
+          width: 100%;
+        }
+      }
+
+      .img-2 {
+        @include lebarGambar(auto, hidden);
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .col-2 {
+      flex: 1.4;
+      .img-1 {
+        @include lebarGambar(auto, hidden);
+        img {
+          width: 100%;
+        }
+      }
+
+      .img-2 {
+        @include lebarGambar(auto, hidden);
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .col-3 {
+      flex: 0.7;
+      .img-1 {
+        @include lebarGambar(auto, hidden);
+        img {
+          width: 100%;
+        }
+      }
+
+      .img-2 {
+        @include lebarGambar(auto, hidden);
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+section.service {
+  // box-shadow: 0em 1.2em 1.2em rgba(0, 0, 0, 0.8) !important;
+  // box-shadow: 0 0.5rem 1rem rgb(0, 0, 0) !important;
+
+  .col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pic {
+      @include lebarGambar(auto, hidden);
+      img {
+        width: 100%;
+      }
+    }
+
+    .text {
+      padding-left: 20px !important;
+
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 35px !important;
+      }
+      h5 {
+        font-size: 0.8em !important;
+        font-weight: bold;
+      }
+
+      h4 {
+        font-size: 1.3em;
+        font-weight: 400;
+      }
+
+      p {
+        font-size: 1.1em;
+        font-weight: 200;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+section.full {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: url("/assets/img/service-lg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  h3 {
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  }
+
+  button {
+    color: #fff;
+  }
+}
+
+footer {
+  min-height: 500px;
+  padding-top: 3em;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .row {
+    .col-md-6 {
+      h4 {
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        margin-bottom: 1em;
+      }
+
+      P {
+        color: rgb(112, 112, 112);
+        svg {
+          margin-right: 10px;
+        }
+      }
+
+      .col-md-4 {
+        a {
+          margin-bottom: 0.9em;
+          display: block;
+          color: rgb(112, 112, 112);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  P {
+    color: rgb(185, 185, 185);
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    .nav-link {
+      margin-left: 0px;
+    }
+  }
+
+  section.galery {
+    .container {
+      max-width: 70vmax !important;
+    }
+
+    .row {
+      .col-1 {
+        .img-1 {
+          @include lebarGambar(auto, hidden);
+          img {
+            width: 100%;
+          }
+        }
+
+        .img-2 {
+          box-sizing: border-box;
+          @include lebarGambar(auto, hidden);
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .col-2 {
+        .img-1 {
+          @include lebarGambar(auto, hidden);
+          img {
+            width: 100%;
+          }
+        }
+
+        .img-2 {
+          @include lebarGambar(auto, hidden);
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .col-3 {
+        .img-1 {
+          @include lebarGambar(auto, hidden);
+          img {
+            width: 100%;
+          }
+        }
+
+        .img-2 {
+          @include lebarGambar(auto, hidden);
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  section.full {
+    background-image: url("/assets/img/service-md.jpg");
+  }
+
+  footer {
+    min-height: 350px !important;
+
+    h4 {
+      font-size: 1em !important;
+    }
+
+    a,
+    p {
+      font-size: 0.8em;
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 750px) {
+  button {
+    font-size: 0.9em !important;
+    padding: 0.2em 0.6em !important;
+    color: #fff;
+  }
+
+  .navbar {
+    padding-top: 0.5em;
+
+    .navbar-brand {
+      font-size: 1.1em;
+    }
+
+    .nav-link {
+      margin-left: 0px;
+    }
+  }
+
+  .jumbotron {
+    padding-bottom: 2.5em !important;
+    .text {
+      p {
+        width: 70%;
+      }
+    }
+    .pic {
+      margin-top: 40px;
+      img {
+        width: 80%;
+      }
+    }
+  }
+
+  section.galery {
+    // min-height: 200px !important;
+    padding-top: 2.5em !important;
+
+    .container {
+      width: 100%;
+      .row {
+        h3 {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        .col {
+          min-height: 250px !important;
+          // padding: 0.2em;
+        }
+
+        .col-1 {
+          padding-right: 0.2em;
+          .img-1 {
+            transition: 0.7s;
+            margin-bottom: 0.2em !important;
+            @include lebarGambar(auto, hidden);
+          }
+
+          .img-1.animate {
+            margin-bottom: 0.2em !important;
+          }
+          img {
+            width: 100%;
+          }
+        }
+
+        .col-2 {
+          .img-1 {
+            margin-bottom: 0.2em !important;
+            @include lebarGambar(auto, hidden);
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .col-3 {
+          padding-left: 0.2em;
+
+          .img-1 {
+            margin-bottom: 0.2em !important;
+            @include lebarGambar(auto, hidden);
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  section.service {
+    padding-top: 2.5em !important;
+    .col-md-6 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .pic {
+        max-width: 80%;
+        // @include lebarGambar(auto, hidden);
+        img {
+          width: 100%;
+        }
+      }
+
+      .text {
+        padding-left: 0px !important;
+        h5 {
+          font-size: 0.7em !important;
+          font-weight: bold;
+        }
+
+        h3 {
+          font-size: 1.3em !important;
+        }
+
+        h4 {
+          font-size: 1.1em;
+          font-weight: 500;
+        }
+
+        p {
+          font-size: 0.9em !important;
+          font-weight: 200;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  section.full {
+    background-image: url("/assets/img/service-sm.jpg");
+
+    h3 {
+      font-size: 1.2em;
+      font-weight: 400;
+    }
+
+    button:hover {
+      color: #fff !important;
+    }
+  }
+
+  footer {
+    padding-top: 2.5em;
+    padding-bottom: 0.2em;
+
+    .row {
+      h4 {
+        letter-spacing: 2px;
+        font-size: 0.9em;
+        font-weight: 600;
+        color: rgb(112, 112, 112);
+      }
+
+      p,
+      a {
+        font-size: 0.9em;
+        font-weight: 200;
+      }
+
+      .col-md-6 {
+        flex-direction: column;
+      }
+      .col-md-4 {
+        h4 {
+          font-size: 0.9em;
+          margin-top: 1.2em;
+        }
+        a {
+        }
+      }
+    }
+
+    p {
+      font-size: 0.7em;
+      font-weight: 200;
+      margin-top: 1.2em;
+    }
+  }
+}
