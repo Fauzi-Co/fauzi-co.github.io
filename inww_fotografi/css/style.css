@@ -1,15 +1,14 @@
 button {
-  color: #fff;
+  color: #fff !important;
 }
 
 button:hover {
-  color: #fff;
+  color: #fff !important;
 }
 
 button:focus {
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .navbar-drop {
