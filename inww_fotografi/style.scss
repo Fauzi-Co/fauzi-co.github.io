@@ -51,7 +51,6 @@ button:focus {
 
 .jumbotron {
   min-height: 100vh;
-  background-color: #f7f7f7 !important;
 
   .text {
     // flex: 0.8;
@@ -78,9 +77,6 @@ button:focus {
 }
 
 section.galery {
-  // box-shadow: inset 0em -0.3em 0.3em rgba(0, 0, 0, 0.4);
-  // box-shadow: 0 .5rem 1rem rgb(0, 0, 0) !important;
-
   .container {
     max-width: 70vmax !important;
   }
@@ -143,9 +139,6 @@ section.galery {
 }
 
 section.service {
-  // box-shadow: 0em 1.2em 1.2em rgba(0, 0, 0, 0.8) !important;
-  // box-shadow: 0 0.5rem 1rem rgb(0, 0, 0) !important;
-
   .col-md-6 {
     display: flex;
     justify-content: center;
