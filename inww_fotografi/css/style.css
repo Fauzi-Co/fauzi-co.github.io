@@ -351,6 +351,7 @@ footer P {
     margin-left: 0px;
   }
   .jumbotron {
+    min-height: 100vw;
     padding-bottom: 2.5em !important;
   }
   .jumbotron .text p {
