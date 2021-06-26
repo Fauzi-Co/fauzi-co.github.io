@@ -300,9 +300,14 @@ section.about {
     .box {
       h3 {
         text-align: center;
+        margin-bottom: 1.5em;
       }
-      width: 70%;
+      width: 50%;
       margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
     }
   }
 }
@@ -593,9 +598,6 @@ footer {
     .container {
       .box {
         width: 100%;
-        .ratio-4x3 {
-          --bs-aspect-ratio: 100% !important;
-        }
       }
     }
   }

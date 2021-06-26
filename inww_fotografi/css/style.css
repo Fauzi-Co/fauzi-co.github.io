@@ -352,12 +352,17 @@ section.service .col-md-6 .text .service-3.animate {
 }
 
 section.about .container .box {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
 }
 
 section.about .container .box h3 {
   text-align: center;
+  margin-bottom: 1.5em;
+}
+
+section.about .container img {
+  width: 100%;
 }
 
 section.full {
@@ -611,9 +616,6 @@ footer P {
   }
   section.about .container .box {
     width: 100%;
-  }
-  section.about .container .box .ratio-4x3 {
-    --bs-aspect-ratio: 100% !important;
   }
   section.full {
     background-image: url("../assets/img/service-sm.jpg");
