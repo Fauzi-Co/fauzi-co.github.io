@@ -48,10 +48,6 @@ button:focus {
   letter-spacing: 1px;
 }
 
-.jumbotron {
-  min-height: 100vh;
-}
-
 .jumbotron .text {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

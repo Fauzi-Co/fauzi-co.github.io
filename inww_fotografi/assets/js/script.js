@@ -25,14 +25,17 @@ window.addEventListener("load", () => {
   jumbotronTxt.classList.add("animate");
 });
 
+alert(window.innerHeight);
+
 document.addEventListener("scroll", () => {
-  if (window.scrollY > 20) {
+  // desktop
+  if (window.innerHeight >= 553 && window.scrollY > 20) {
     navDrop.classList.add("shadow");
   } else if (window.scrollY < 20) {
     navDrop.classList.remove("shadow");
   }
 
-  if (window.scrollY > 450) {
+  if (window.innerHeight >= 553 && window.scrollY > 400) {
     galeryH3.classList.add("animate");
     col_1_Img1.classList.add("animate");
     col_2_Img1.classList.add("animate");
@@ -42,7 +45,31 @@ document.addEventListener("scroll", () => {
     col_1_Img2.classList.add("animate");
   }
 
-  if (window.scrollY > 1200) {
+  if (window.innerHeight >= 553 && window.scrollY > 940) {
+    servicePic.classList.add("animate");
+    service_1.classList.add("animate");
+    service_2.classList.add("animate");
+    service_3.classList.add("animate");
+  }
+
+  // mobile
+  if (window.innerHeight <= 553 && window.scrollY > 20) {
+    navDrop.classList.add("shadow");
+  } else if (window.scrollY < 20) {
+    navDrop.classList.remove("shadow");
+  }
+
+  if (window.innerHeight <= 553 && window.scrollY > 400) {
+    galeryH3.classList.add("animate");
+    col_1_Img1.classList.add("animate");
+    col_2_Img1.classList.add("animate");
+    col_3_Img1.classList.add("animate");
+    col_3_Img2.classList.add("animate");
+    col_2_Img2.classList.add("animate");
+    col_1_Img2.classList.add("animate");
+  }
+
+  if (window.innerHeight <= 553 && window.scrollY > 940) {
     servicePic.classList.add("animate");
     service_1.classList.add("animate");
     service_2.classList.add("animate");
