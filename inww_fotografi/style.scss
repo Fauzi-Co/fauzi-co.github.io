@@ -11,6 +11,19 @@
   transform: translateY($y);
 }
 
+@mixin animate($direction, $value, $opacity: 1, $transition: 0s, $delay: none) {
+  @if $direction = up {
+    transform: translateY($value);
+  } @else if $direction = left {
+    transform: translateX($value);
+  }
+
+  @if $transition != 0s {
+    transition: $transition $delay;
+  }
+  opacity: $opacity;
+}
+
 button {
   color: #fff !important;
 }
@@ -219,9 +232,17 @@ section.service {
     align-items: center;
     .pic {
       @include lebarGambar(auto, hidden);
+      @include translateX(-40px);
+      opacity: 0;
+      transition: 0.8s;
       img {
         width: 100%;
       }
+    }
+
+    .pic.animate {
+      @include translateX(0);
+      opacity: 1;
     }
 
     .text {
@@ -245,6 +266,30 @@ section.service {
         font-size: 1.1em;
         font-weight: 200;
         margin-bottom: 30px;
+      }
+
+      .service-1 {
+        @include animate(left, 40px, 0, 0.8s, 0.6s);
+      }
+
+      .service-1.animate {
+        @include animate(left, 0, 1);
+      }
+
+      .service-2 {
+        @include animate(left, 40px, 0, 0.8s, 1.2s);
+      }
+
+      .service-2.animate {
+        @include animate(left, 0, 1);
+      }
+
+      .service-3 {
+        @include animate(left, 40px, 0, 0.8s, 1.8s);
+      }
+
+      .service-3.animate {
+        @include animate(left, 0, 1);
       }
     }
   }
