@@ -25,8 +25,6 @@ window.addEventListener("load", () => {
   jumbotronTxt.classList.add("animate");
 });
 
-alert(window.innerHeight);
-
 document.addEventListener("scroll", () => {
   // desktop
   if (window.innerHeight >= 553 && window.scrollY > 20) {
