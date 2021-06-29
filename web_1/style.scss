@@ -1,0 +1,362 @@
+@mixin d-flex($direction: row, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin bg-set($size: cover, $position: center) {
+  background-size: $size;
+  background-position: $position;
+}
+
+@mixin after() {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin translateX() {
+  // tran
+}
+
+// global
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: #fff;
+}
+section {
+  min-height: 400px;
+  background: #000;
+}
+
+// mobile
+header .navbar {
+  background: rgba(0, 0, 0, 1);
+  transition: 0.6s;
+  // box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.15) !important;
+
+  .navbar-toggler,
+  .navbar-toggler:focus {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+header .navbar.bg-black {
+  background: rgba(0, 0, 0, 1);
+}
+
+.jumbotron {
+  background: url("/assets/img/Jum_bg.jpg");
+  @include bg-set();
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+
+  .box-1 {
+    position: relative;
+    margin-top: 5.5rem;
+    z-index: 11;
+
+    h3 {
+      color: white;
+      font-size: 1.8rem !important;
+      font-weight: 600;
+      letter-spacing: 0.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .box {
+      display: inline-block;
+      background: rgba(73, 73, 73, 0.3);
+      padding: 5px 10px;
+      padding-bottom: 8px;
+      border-radius: 20px;
+      svg.bi-arrow-down-short {
+        width: 20px;
+        height: 20px;
+        background: rgba(245, 245, 245, 0.2);
+        margin-right: 5px;
+        border-radius: 50%;
+      }
+      p {
+        display: inline-block;
+        color: #fff;
+        margin-bottom: 0;
+        font-size: 0.8rem;
+        letter-spacing: 0.01rem;
+      }
+    }
+
+    margin-bottom: 2.5rem;
+  }
+
+  .box-2 {
+    position: relative;
+    z-index: 12;
+    .container {
+      @include d-flex(row, space-evenly, center);
+      flex-wrap: wrap;
+      .card {
+        @include d-flex(column, flex-end);
+        width: 40%;
+        height: 120px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 0;
+        box-sizing: border-box;
+        padding: 10px;
+        color: #fff;
+
+        h4 {
+          font-size: 0.7rem;
+        }
+      }
+
+      @for $i from 1 through 4 {
+        .card:nth-child(#{$i}) {
+          // background-color: lighten($base-color, $i * 5%);
+          background: url("/assets/img/card-" + $i + ".jpg");
+          @include bg-set();
+        }
+      }
+    }
+  }
+}
+
+.jumbotron::after {
+  @include after();
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 9%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+}
+
+section.qoutes {
+  min-height: 300px;
+  .container {
+    padding-top: 1.5rem;
+
+    .box {
+      width: 100%;
+      h4 {
+        font-size: 1.3rem;
+        letter-spacing: 0.071rem;
+        margin-bottom: 2.5rem;
+      }
+
+      p {
+        font-size: 0.7rem;
+        margin-bottom: 0;
+        font-weight: 200;
+        letter-spacing: 0.05rem;
+
+        a {
+          color: rgb(39, 162, 219);
+          text-decoration: none;
+          transition: 0.2s;
+        }
+
+        a:hover {
+          color: darken($color: rgb(39, 162, 219), $amount: 10);
+        }
+      }
+    }
+  }
+}
+
+section.professional {
+  .container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    .row {
+      .col-md-6:nth-child(1) {
+        @include d-flex(column, center, center);
+        margin-bottom: 1.5rem;
+      }
+
+      .col-md-6:nth-child(2) {
+        @include d-flex(column, center, flex-start);
+      }
+
+      .col-md-6 {
+        img {
+          width: 100%;
+        }
+
+        h4 {
+          font-size: 1.3rem;
+          letter-spacing: 0.071rem;
+          margin-bottom: 1.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+          margin-bottom: 2.5rem;
+          font-weight: 200;
+          letter-spacing: 0.05rem;
+        }
+
+        a {
+          text-decoration: none;
+          background: linear-gradient(to right, rgb(39, 162, 219) 0%, rgb(39, 162, 219) 11%, rgb(240, 56, 194) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: 0.3s;
+        }
+
+        .col-sm-6 {
+          margin-top: 2.5rem;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// table
+
+// Desktop
+@media (min-width: 1200px) {
+  header .navbar {
+    background: rgba(0, 0, 0, 0);
+    // box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0);
+  }
+
+  .jumbotron {
+    background: url("/assets/img/Jum_bg.jpg");
+    @include bg-set();
+
+    .box-1 {
+      margin-top: 0;
+      min-height: 23rem;
+      @include d-flex(column, center);
+
+      h3 {
+        font-size: 3rem !important;
+        font-weight: 600;
+        letter-spacing: 0.05rem;
+        margin-bottom: 1.5rem;
+        padding-top: 0.8rem;
+      }
+
+      h3.animate {
+      }
+
+      .box {
+        display: inline-block;
+        background: rgba(73, 73, 73, 0.3);
+        padding: 5px 10px;
+        padding-bottom: 8px;
+        border-radius: 20px;
+        svg.bi-arrow-down-short {
+          width: 20px;
+          height: 20px;
+          background: rgba(245, 245, 245, 0.2);
+          margin-right: 5px;
+          border-radius: 50%;
+        }
+        p {
+          display: inline-block;
+          color: #fff;
+          margin-bottom: 0;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .box-2 {
+      padding-bottom: 2rem;
+
+      .container {
+        @include d-flex(row, center, center);
+        flex-wrap: nowrap;
+        gap: 2rem;
+
+        .card {
+          @include d-flex(column, flex-end);
+          width: 25%;
+          height: 180px;
+          border: none;
+          border-radius: 0;
+          box-sizing: border-box;
+          padding: 10px;
+          color: #fff;
+
+          h4 {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  section.qoutes {
+    min-height: 500px;
+    .container {
+      padding: 2.5rem 0;
+      .box {
+        margin: 0 auto;
+        width: 55%;
+
+        h4 {
+          font-size: 1.6rem;
+          letter-spacing: 0.3rem;
+          margin-bottom: 10.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  section.professional {
+    .container {
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+      .row {
+        .col-md-6:nth-child(1) {
+          margin-bottom: 0rem;
+        }
+
+        .col-md-6 {
+          h4 {
+            font-size: 1.6rem;
+            letter-spacing: 0.3rem;
+            margin-bottom: 2.5rem;
+          }
+
+          p {
+            font-size: 1rem;
+            margin-bottom: 3.5rem;
+          }
+
+          a {
+            margin-bottom: 0.1rem;
+          }
+
+          .col-sm-6 {
+            margin-top: 1.5rem;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
