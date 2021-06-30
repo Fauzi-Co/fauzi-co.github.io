@@ -55,7 +55,7 @@ header .navbar.bg-black {
 }
 
 .jumbotron {
-  background: url("assets/img/Jum_bg.jpg");
+  background: url("../img/Jum_bg.jpg");
   @include bg-set();
   position: relative;
   z-index: 10;
@@ -124,7 +124,7 @@ header .navbar.bg-black {
       @for $i from 1 through 4 {
         .card:nth-child(#{$i}) {
           // background-color: lighten($base-color, $i * 5%);
-          background: url("assets/img/card-" + $i + ".jpg");
+          background: url("../img/card-" + $i + ".jpg");
           @include bg-set();
         }
       }
