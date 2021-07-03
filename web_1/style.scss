@@ -55,7 +55,7 @@ header .navbar.bg-black {
 }
 
 .jumbotron {
-  background: url("../img/Jum_bg.jpg");
+  background: url("../img/Jum_bg_mobile.jpg");
   @include bg-set();
   position: relative;
   z-index: 10;
@@ -211,7 +211,6 @@ section.professional {
           background: linear-gradient(to right, rgb(39, 162, 219) 0%, rgb(39, 162, 219) 11%, rgb(240, 56, 194) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          transition: 0.3s;
         }
 
         .col-sm-6 {
@@ -226,6 +225,63 @@ section.professional {
   }
 }
 
+section.ex {
+  position: relative;
+
+  .container {
+    text-align: center;
+    padding-top: 2.5rem;
+
+    h4 {
+      text-align: left;
+      font-size: 1.3rem;
+      letter-spacing: 0.071rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .col-md-4 {
+      img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .col-md-4:nth-child(2),
+    .col-md-4:nth-child(3) {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      background: linear-gradient(to right, rgb(39, 162, 219) 0%, rgb(39, 162, 219) 11%, rgb(240, 56, 194) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: absolute;
+      bottom: 60px;
+      left: 42%;
+      z-index: 1000;
+    }
+  }
+}
+
+section.ex::after {
+  @include after();
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 11%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+section.full {
+  padding-top: 7rem;
+  height: 400px;
+  .container {
+    height: 100%;
+    background: url("../img/Jum_bg_large.jpg");
+    @include bg-set();
+  }
+}
+
 // table
 
 // Desktop
@@ -236,7 +292,7 @@ section.professional {
   }
 
   .jumbotron {
-    background: url("/assets/img/Jum_bg.jpg");
+    background: url("../img/Jum_bg_large.jpg");
     @include bg-set();
 
     .box-1 {
@@ -245,7 +301,7 @@ section.professional {
       @include d-flex(column, center);
 
       h3 {
-        font-size: 3rem !important;
+        font-size: 4rem !important;
         font-weight: 600;
         letter-spacing: 0.05rem;
         margin-bottom: 1.5rem;
@@ -327,7 +383,8 @@ section.professional {
   section.professional {
     .container {
       padding-top: 4.5rem;
-      padding-bottom: 4.5rem;
+      padding-bottom: 5.5rem;
+
       .row {
         .col-md-6:nth-child(1) {
           margin-bottom: 0rem;
@@ -335,7 +392,7 @@ section.professional {
 
         .col-md-6 {
           h4 {
-            font-size: 1.6rem;
+            font-size: 3rem;
             letter-spacing: 0.3rem;
             margin-bottom: 2.5rem;
           }
@@ -355,6 +412,67 @@ section.professional {
               width: 100%;
             }
           }
+        }
+      }
+    }
+  }
+
+  section.ex {
+    .container {
+      height: 1250px;
+      overflow: hidden;
+
+      h4 {
+        font-size: 3rem;
+        letter-spacing: 0.3rem;
+        width: 50%;
+      }
+
+      .col-md-4 {
+      }
+
+      .col-md-4:nth-child(2),
+      .col-md-4:nth-child(3) {
+        display: block;
+      }
+
+      .col-md-4:nth-child(1) {
+        margin-top: 6.5rem;
+      }
+
+      .col-md-4:nth-child(2) {
+        margin-top: 3.5rem;
+      }
+
+      a.center {
+        left: 46%;
+        bottom: 30px;
+      }
+    }
+  }
+
+  section.full {
+    .container {
+      .box {
+        width: 50%;
+        height: 100%;
+        margin: 0 auto;
+        @include d-flex(column, center);
+
+        h4 {
+          font-size: 2rem;
+          letter-spacing: 0.1rem;
+          margin-bottom: 2.5rem;
+        }
+
+        a {
+          svg {
+            margin-left: 0.5rem;
+          }
+        }
+
+        a:hover {
+          color: #fff;
         }
       }
     }

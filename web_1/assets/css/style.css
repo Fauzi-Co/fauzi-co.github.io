@@ -32,7 +32,7 @@ header .navbar.bg-black {
 }
 
 .jumbotron {
-  background: url("../img/Jum_bg.jpg");
+  background: url("../img/Jum_bg_mobile.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -265,8 +265,6 @@ section.professional .container .row .col-md-6 a {
   background: linear-gradient(to right, #27a2db 0%, #27a2db 11%, #f038c2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 section.professional .container .row .col-md-6 .col-sm-6 {
@@ -277,12 +275,74 @@ section.professional .container .row .col-md-6 .col-sm-6 img {
   width: 100%;
 }
 
+section.ex {
+  position: relative;
+}
+
+section.ex .container {
+  text-align: center;
+  padding-top: 2.5rem;
+}
+
+section.ex .container h4 {
+  text-align: left;
+  font-size: 1.3rem;
+  letter-spacing: 0.071rem;
+  margin-bottom: 1.5rem;
+}
+
+section.ex .container .col-md-4 img {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+section.ex .container .col-md-4:nth-child(2),
+section.ex .container .col-md-4:nth-child(3) {
+  display: none;
+}
+
+section.ex .container a {
+  text-decoration: none;
+  background: -webkit-gradient(linear, left top, right top, from(#27a2db), color-stop(11%, #27a2db), to(#f038c2));
+  background: linear-gradient(to right, #27a2db 0%, #27a2db 11%, #f038c2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  bottom: 60px;
+  left: 42%;
+  z-index: 1000;
+}
+
+section.ex::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(11%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.6) 11%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+section.full {
+  padding-top: 7rem;
+  height: 400px;
+}
+
+section.full .container {
+  height: 100%;
+  background: url("../img/Jum_bg_large.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 @media (min-width: 1200px) {
   header .navbar {
     background: rgba(0, 0, 0, 0);
   }
   .jumbotron {
-    background: url("/assets/img/Jum_bg.jpg");
+    background: url("../img/Jum_bg_large.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -304,7 +364,7 @@ section.professional .container .row .col-md-6 .col-sm-6 img {
             align-items: flex-start;
   }
   .jumbotron .box-1 h3 {
-    font-size: 3rem !important;
+    font-size: 4rem !important;
     font-weight: 600;
     letter-spacing: 0.05rem;
     margin-bottom: 1.5rem;
@@ -397,13 +457,13 @@ section.professional .container .row .col-md-6 .col-sm-6 img {
   }
   section.professional .container {
     padding-top: 4.5rem;
-    padding-bottom: 4.5rem;
+    padding-bottom: 5.5rem;
   }
   section.professional .container .row .col-md-6:nth-child(1) {
     margin-bottom: 0rem;
   }
   section.professional .container .row .col-md-6 h4 {
-    font-size: 1.6rem;
+    font-size: 3rem;
     letter-spacing: 0.3rem;
     margin-bottom: 2.5rem;
   }
@@ -419,6 +479,58 @@ section.professional .container .row .col-md-6 .col-sm-6 img {
   }
   section.professional .container .row .col-md-6 .col-sm-6 img {
     width: 100%;
+  }
+  section.ex .container {
+    height: 1250px;
+    overflow: hidden;
+  }
+  section.ex .container h4 {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    width: 50%;
+  }
+  section.ex .container .col-md-4:nth-child(2),
+  section.ex .container .col-md-4:nth-child(3) {
+    display: block;
+  }
+  section.ex .container .col-md-4:nth-child(1) {
+    margin-top: 6.5rem;
+  }
+  section.ex .container .col-md-4:nth-child(2) {
+    margin-top: 3.5rem;
+  }
+  section.ex .container a.center {
+    left: 46%;
+    bottom: 30px;
+  }
+  section.full .container .box {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  section.full .container .box h4 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2.5rem;
+  }
+  section.full .container .box a svg {
+    margin-left: 0.5rem;
+  }
+  section.full .container .box a:hover {
+    color: #fff;
   }
 }
 /*# sourceMappingURL=style.css.map */
