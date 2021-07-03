@@ -59,7 +59,7 @@ header .navbar.bg-black {
   @include bg-set();
   position: relative;
   z-index: 10;
-  min-height: 100vh;
+  min-height: 200px;
 
   .box-1 {
     position: relative;
@@ -276,9 +276,43 @@ section.full {
   padding-top: 7rem;
   height: 400px;
   .container {
+    position: relative;
     height: 100%;
+    margin: 0 auto;
     background: url("../img/Jum_bg_large.jpg");
     @include bg-set();
+
+    .box {
+      height: 100%;
+      position: relative;
+      z-index: 10;
+      @include d-flex(column, center);
+
+      h4 {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        border-bottom: 1px solid rgba(225, 255, 255, 0);
+      }
+
+      a:hover {
+        color: white;
+        border-bottom: 1px solid rgba(225, 255, 255, 1);
+      }
+    }
+  }
+
+  .container::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    opacity: 0.5;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -290,7 +324,6 @@ section.full {
 @media (min-width: 992px) {
   header .navbar {
     background: rgba(0, 0, 0, 0);
-    // box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0);
   }
 
   .jumbotron {
@@ -652,9 +685,6 @@ section.full {
     .container {
       .box {
         width: 50%;
-        height: 100%;
-        margin: 0 auto;
-        @include d-flex(column, center);
 
         h4 {
           font-size: 2rem;
