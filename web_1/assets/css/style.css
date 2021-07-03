@@ -337,6 +337,203 @@ section.full .container {
   background-position: center;
 }
 
+@media (min-width: 992px) {
+  header .navbar {
+    background: rgba(0, 0, 0, 0);
+  }
+  .jumbotron {
+    background: url("../img/Jum_bg_large.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .jumbotron .box-1 {
+    margin-top: 0;
+    min-height: 23rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .jumbotron .box-1 h3 {
+    font-size: 4rem !important;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1.5rem;
+    padding-top: 0.8rem;
+  }
+  .jumbotron .box-1 .box {
+    display: inline-block;
+    background: rgba(73, 73, 73, 0.3);
+    padding: 5px 10px;
+    padding-bottom: 8px;
+    border-radius: 20px;
+  }
+  .jumbotron .box-1 .box svg.bi-arrow-down-short {
+    width: 20px;
+    height: 20px;
+    background: rgba(245, 245, 245, 0.2);
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+  .jumbotron .box-1 .box p {
+    display: inline-block;
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+  }
+  .jumbotron .box-2 {
+    padding-bottom: 2rem;
+  }
+  .jumbotron .box-2 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 2rem;
+  }
+  .jumbotron .box-2 .container .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 25%;
+    height: 180px;
+    border: none;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    color: #fff;
+  }
+  .jumbotron .box-2 .container .card h4 {
+    font-size: 1.2rem;
+  }
+  section.qoutes {
+    min-height: 500px;
+  }
+  section.qoutes .container {
+    padding: 2.5rem 0;
+  }
+  section.qoutes .container .box {
+    margin: 0 auto;
+    width: 55%;
+  }
+  section.qoutes .container .box h4 {
+    font-size: 1.6rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 10.5rem;
+  }
+  section.qoutes .container .box p {
+    font-size: 1rem;
+  }
+  section.professional .container {
+    padding-top: 4.5rem;
+    padding-bottom: 5.5rem;
+  }
+  section.professional .container .row .col-md-6:nth-child(1) {
+    margin-bottom: 0rem;
+  }
+  section.professional .container .row .col-md-6 h4 {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2.5rem;
+  }
+  section.professional .container .row .col-md-6 p {
+    font-size: 1rem;
+    margin-bottom: 3.5rem;
+  }
+  section.professional .container .row .col-md-6 a {
+    margin-bottom: 0.1rem;
+  }
+  section.professional .container .row .col-md-6 .col-sm-6 {
+    margin-top: 1.5rem;
+  }
+  section.professional .container .row .col-md-6 .col-sm-6 img {
+    width: 100%;
+  }
+  section.ex .container {
+    height: 1250px;
+    overflow: hidden;
+  }
+  section.ex .container h4 {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    width: 50%;
+  }
+  section.ex .container .col-md-4:nth-child(2),
+  section.ex .container .col-md-4:nth-child(3) {
+    display: block;
+  }
+  section.ex .container .col-md-4:nth-child(1) {
+    margin-top: 6.5rem;
+  }
+  section.ex .container .col-md-4:nth-child(2) {
+    margin-top: 3.5rem;
+  }
+  section.ex .container a.center {
+    left: 46%;
+    bottom: 30px;
+  }
+  section.full .container .box {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  section.full .container .box h4 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2.5rem;
+  }
+  section.full .container .box a svg {
+    margin-left: 0.5rem;
+  }
+  section.full .container .box a:hover {
+    color: #fff;
+  }
+}
+
 @media (min-width: 1200px) {
   header .navbar {
     background: rgba(0, 0, 0, 0);
