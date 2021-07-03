@@ -383,6 +383,62 @@ section.full .container::after {
   right: 0;
 }
 
+section.get {
+  padding-top: 6.5rem;
+  padding-bottom: 6.5rem;
+}
+
+section.get h4 {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2.5rem;
+}
+
+section.get p,
+section.get a {
+  font-size: 1.1rem;
+}
+
+section.get .box {
+  width: 70%;
+}
+
+section.get ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section.get ul li {
+  padding: 1rem 0;
+}
+
+section.get ul li a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+section.get ul li a p {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+section.get ul li a svg {
+  text-align: right;
+  margin-top: 0.4rem;
+}
+
 @media (min-width: 992px) {
   header .navbar {
     background: rgba(0, 0, 0, 0);
@@ -759,6 +815,53 @@ section.full .container::after {
   }
   section.full .container .box a:hover {
     color: #fff;
+  }
+  section.get {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+  }
+  section.get h4 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2.5rem;
+  }
+  section.get p,
+  section.get a {
+    font-size: 1.1rem;
+  }
+  section.get .box {
+    width: 70%;
+  }
+  section.get ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  section.get ul li {
+    padding: 1rem 0;
+  }
+  section.get ul li a {
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  section.get ul li a p {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  section.get ul li a svg {
+    text-align: right;
+    margin-top: 0.4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
