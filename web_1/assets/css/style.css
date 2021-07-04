@@ -1,3 +1,7 @@
+body {
+  background-color: #000;
+}
+
 h1,
 h2,
 h3,
@@ -9,6 +13,12 @@ a {
   color: #fff;
 }
 
+h4 {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2.5rem;
+}
+
 section,
 footer {
   min-height: 400px;
@@ -16,7 +26,7 @@ footer {
 }
 
 header .navbar {
-  background: black;
+  background: #1f1f1f;
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
@@ -29,7 +39,7 @@ header .navbar .navbar-toggler:focus {
 }
 
 header .navbar.bg-black {
-  background: black;
+  background: #1f1f1f;
 }
 
 .jumbotron {
@@ -205,6 +215,11 @@ section.qoutes .container .box p a:hover {
   color: #1e83b1;
 }
 
+section.professional {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#0a0a0a));
+  background: linear-gradient(to bottom, black, #0a0a0a);
+}
+
 section.professional .container {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -277,6 +292,8 @@ section.professional .container .row .col-md-6 .col-sm-6 img {
 }
 
 section.ex {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(#0a0a0a));
+  background: linear-gradient(to top, black, #0a0a0a);
   position: relative;
 }
 
@@ -327,20 +344,22 @@ section.ex::after {
 }
 
 section.full {
-  padding-top: 7rem;
-  height: 400px;
-}
-
-section.full .container {
+  margin-top: 7rem;
   position: relative;
-  height: 100%;
-  margin: 0 auto;
+  min-height: 300px;
   background: url("../img/Jum_bg_large.jpg");
   background-size: cover;
   background-position: center;
 }
 
+section.full .container {
+  position: relative;
+  height: 300px;
+}
+
 section.full .container .box {
+  width: 100%;
+  margin: 0 auto;
   height: 100%;
   position: relative;
   z-index: 10;
@@ -360,37 +379,33 @@ section.full .container .box {
 }
 
 section.full .container .box h4 {
-  margin-bottom: 1rem;
-}
-
-section.full .container .box a {
-  text-decoration: none;
-  border-bottom: 1px solid rgba(225, 255, 255, 0);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 section.full .container .box a:hover {
   color: white;
-  border-bottom: 1px solid #e1ffff;
 }
 
-section.full .container::after {
+section.full::after {
   content: "";
   width: 100%;
   height: 100%;
-  background: #000;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(2%, black), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(to top, black 2%, rgba(0, 0, 0, 0.6) 100%);
   position: absolute;
-  opacity: 0.5;
+  opacity: 1;
   bottom: 0;
   right: 0;
 }
 
 section.get {
-  padding-top: 6.5rem;
-  padding-bottom: 6.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 section.get h4 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: 0.1rem;
   margin-bottom: 2.5rem;
 }
@@ -400,8 +415,16 @@ section.get a {
   font-size: 1.1rem;
 }
 
-section.get .box {
-  width: 70%;
+section.get .col-md-5 .box {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+section.get .col-md-5 .box a {
+  background: -webkit-gradient(linear, left top, right top, from(#27a2db), color-stop(11%, #27a2db), to(#f038c2));
+  background: linear-gradient(to right, #27a2db 0%, #27a2db 11%, #f038c2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 section.get ul {
@@ -440,9 +463,68 @@ section.get ul li a svg {
   margin-top: 0.4rem;
 }
 
+footer.footer {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, black), to(#1f1f1f));
+  background: linear-gradient(to top, black 10%, #1f1f1f 100%);
+}
+
+footer.footer .container {
+  text-align: center;
+}
+
+footer.footer .container h5 {
+  text-transform: uppercase;
+}
+
+footer.footer .container p,
+footer.footer .container a {
+  font-size: 1.1rem;
+}
+
+footer.footer .container a {
+  display: block;
+}
+
+footer.footer .container .row {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+footer.footer .container .row .col-md-6:nth-child(1) p {
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+footer.footer .container .row .col-md-6:nth-child(1) a {
+  text-decoration: none;
+  background: -webkit-gradient(linear, left top, right top, from(#27a2db), color-stop(11%, #27a2db), to(#f038c2));
+  background: linear-gradient(to right, #27a2db 0%, #27a2db 11%, #f038c2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer.footer .container .row .col-md-6:nth-child(2) {
+  padding-top: 2rem;
+}
+
+footer.footer .container .row .col-md-6:nth-child(2) h5 {
+  margin-top: 2.5rem;
+  color: #494949;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+footer.footer .container .row .col-md-6:nth-child(2) a {
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+  text-decoration: none;
+}
+
 @media (min-width: 992px) {
   header .navbar {
-    background: rgba(0, 0, 0, 0);
+    background: #1f1f1f;
   }
   .jumbotron {
     background: url("../img/Jum_bg_large.jpg");
@@ -605,41 +687,12 @@ section.get ul li a svg {
   section.ex .container a.center {
     left: 46%;
     bottom: 30px;
-  }
-  section.full .container .box {
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  section.full .container .box h4 {
-    font-size: 2rem;
-    letter-spacing: 0.1rem;
-    margin-bottom: 2.5rem;
-  }
-  section.full .container .box a svg {
-    margin-left: 0.5rem;
-  }
-  section.full .container .box a:hover {
-    color: #fff;
   }
 }
 
 @media (min-width: 1200px) {
   header .navbar {
-    background: rgba(0, 0, 0, 0);
+    background: #1f1f1f;
   }
   .jumbotron {
     background: url("../img/Jum_bg_large.jpg");
@@ -802,20 +855,6 @@ section.get ul li a svg {
   section.ex .container a.center {
     left: 46%;
     bottom: 30px;
-  }
-  section.full .container .box {
-    width: 50%;
-  }
-  section.full .container .box h4 {
-    font-size: 2rem;
-    letter-spacing: 0.1rem;
-    margin-bottom: 2.5rem;
-  }
-  section.full .container .box a svg {
-    margin-left: 0.5rem;
-  }
-  section.full .container .box a:hover {
-    color: #fff;
   }
   section.get {
     padding-top: 6.5rem;
@@ -863,6 +902,156 @@ section.get ul li a svg {
   section.get ul li a svg {
     text-align: right;
     margin-top: 0.4rem;
+  }
+  section.full {
+    margin-top: 7rem;
+    position: relative;
+    min-height: 300px;
+    background: url("../img/Jum_bg_large.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  section.full .container {
+    position: relative;
+    height: 300px;
+  }
+  section.full .container .box {
+    width: 60%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  section.full .container .box h4 {
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+  }
+  section.full .container .box a:hover {
+    color: white;
+  }
+  section.full::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(2%, black), to(rgba(0, 0, 0, 0.6)));
+    background: linear-gradient(to top, black 2%, rgba(0, 0, 0, 0.6) 100%);
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+    right: 0;
+  }
+  section.get {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+  }
+  section.get h4 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2.5rem;
+  }
+  section.get p,
+  section.get a {
+    font-size: 1.1rem;
+  }
+  section.get .col-md-5 .box {
+    width: 70%;
+  }
+  section.get .col-md-5 .box a {
+    background: -webkit-gradient(linear, left top, right top, from(#27a2db), color-stop(11%, #27a2db), to(#f038c2));
+    background: linear-gradient(to right, #27a2db 0%, #27a2db 11%, #f038c2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.get ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  section.get ul li {
+    padding: 1rem 0;
+  }
+  section.get ul li a {
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  section.get ul li a p {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  section.get ul li a svg {
+    text-align: right;
+    margin-top: 0.4rem;
+  }
+  footer.footer {
+    padding-top: 6.5rem;
+    padding-bottom: 2.5rem;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, black), to(#1f1f1f));
+    background: linear-gradient(to top, black 10%, #1f1f1f 100%);
+  }
+  footer.footer .container {
+    text-align: center;
+  }
+  footer.footer .container h5 {
+    text-transform: uppercase;
+  }
+  footer.footer .container p,
+  footer.footer .container a {
+    font-size: 1.1rem;
+  }
+  footer.footer .container a {
+    display: block;
+  }
+  footer.footer .container .row {
+    text-align: left;
+    margin-bottom: 2.5rem;
+  }
+  footer.footer .container .row .col-md-6:nth-child(1) p {
+    margin-bottom: 2.5rem;
+    width: 50%;
+  }
+  footer.footer .container .row .col-md-6:nth-child(1) a {
+    text-decoration: none;
+    background: -webkit-gradient(linear, left top, right top, from(#27a2db), color-stop(11%, #27a2db), to(#f038c2));
+    background: linear-gradient(to right, #27a2db 0%, #27a2db 11%, #f038c2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  footer.footer .container .row .col-md-6:nth-child(2) {
+    padding-top: 2rem;
+  }
+  footer.footer .container .row .col-md-6:nth-child(2) h5 {
+    color: #494949;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  footer.footer .container .row .col-md-6:nth-child(2) a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+    text-decoration: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
