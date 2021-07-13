@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
 
 document.addEventListener("scroll", () => {
   // desktop
-  if (window.innerHeight >= 553 && window.scrollY > 20) {
+  if (window.scrollY > 20) {
     nav.classList.add("bg-black");
   } else if (window.scrollY < 20) {
     nav.classList.remove("bg-black");

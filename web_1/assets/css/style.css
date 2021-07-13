@@ -64,6 +64,7 @@ header .navbar.bg-black {
   font-weight: 600;
   letter-spacing: 0.05rem;
   margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 0.5rem black;
 }
 
 .jumbotron .box-1 .box {
@@ -184,7 +185,7 @@ section.qoutes {
 }
 
 section.qoutes .container {
-  padding-top: 1.5rem;
+  padding-top: 4.5rem;
 }
 
 section.qoutes .container .box {
@@ -239,7 +240,7 @@ section.professional .container .row .col-md-6:nth-child(1) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 section.professional .container .row .col-md-6:nth-child(2) {
@@ -306,7 +307,7 @@ section.ex .container h4 {
   text-align: left;
   font-size: 1.3rem;
   letter-spacing: 0.071rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 section.ex .container .col-md-4 img {
@@ -327,7 +328,7 @@ section.ex .container a {
   -webkit-text-fill-color: transparent;
   position: absolute;
   bottom: 60px;
-  left: 42%;
+  left: 37%;
   z-index: 1000;
 }
 
@@ -383,16 +384,22 @@ section.full .container .box h4 {
   font-size: 1.5rem;
 }
 
+section.full .container .box a {
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 section.full .container .box a:hover {
-  color: white;
+  color: teal;
 }
 
 section.full::after {
   content: "";
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(2%, black), to(rgba(0, 0, 0, 0.6)));
-  background: linear-gradient(to top, black 2%, rgba(0, 0, 0, 0.6) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(2%, black), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(to top, black 2%, rgba(0, 0, 0, 0.4) 100%);
   position: absolute;
   opacity: 1;
   bottom: 0;
@@ -415,6 +422,10 @@ section.get a {
   font-size: 1.1rem;
 }
 
+section.get .col-md-5 {
+  margin-bottom: 2.5rem;
+}
+
 section.get .col-md-5 .box {
   width: 100%;
   margin-bottom: 2.5rem;
@@ -425,6 +436,7 @@ section.get .col-md-5 .box a {
   background: linear-gradient(to right, #27a2db 0%, #27a2db 11%, #f038c2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-decoration: none;
 }
 
 section.get ul {
@@ -454,13 +466,24 @@ section.get ul li a {
 }
 
 section.get ul li a p {
+  color: #cccccc;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   display: inline-block;
   margin-bottom: 0;
 }
 
+section.get ul li a p:hover,
+section.get ul li a p:hover ~ svg {
+  color: #fff;
+}
+
 section.get ul li a svg {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   text-align: right;
   margin-top: 0.4rem;
+  color: #cccccc;
 }
 
 footer.footer {
@@ -511,20 +534,199 @@ footer.footer .container .row .col-md-6:nth-child(2) {
 
 footer.footer .container .row .col-md-6:nth-child(2) h5 {
   margin-top: 2.5rem;
-  color: #494949;
+  color: #666666;
   margin-bottom: 1.5rem;
   font-size: 1rem;
 }
 
 footer.footer .container .row .col-md-6:nth-child(2) a {
+  color: #cccccc;
   font-size: 0.9rem;
   padding: 0.4rem 0;
   text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer.footer .container .row .col-md-6:nth-child(2) a:hover {
+  color: #fff;
+}
+
+footer.footer .container h5.logo {
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  header .navbar {
+    background: rgba(31, 31, 31, 0);
+  }
+  header .navbar.bg-black {
+    background: #1f1f1f;
+  }
+  .jumbotron {
+    background: url("../img/Jum_bg_mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+  }
+  .jumbotron .box-1 {
+    margin-bottom: 4rem;
+  }
+  .jumbotron .box-1 h3 {
+    font-size: 2.2rem !important;
+    margin-bottom: 2rem;
+  }
+  .jumbotron .box-2 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .jumbotron .box-2 .container .card {
+    width: 48%;
+    height: 200px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+  .jumbotron .box-2 .container .card h4 {
+    font-size: 1.05rem;
+  }
+  section.qoutes {
+    min-height: 300px;
+  }
+  section.qoutes .container .box {
+    width: 70%;
+    margin: 0 auto;
+  }
+  section.qoutes .container .box h4 {
+    font-size: 1.3rem;
+    letter-spacing: 0.08rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+  section.professional {
+    background: -webkit-gradient(linear, left top, left bottom, from(black), to(#0a0a0a));
+    background: linear-gradient(to bottom, black, #0a0a0a);
+  }
+  section.professional .container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  section.professional .container .row .col-md-6:nth-child(1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 2.5rem;
+  }
+  section.professional .container .row .col-md-6:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  section.professional .container .row .col-md-6 img {
+    width: 100%;
+  }
+  section.professional .container .row .col-md-6 h4 {
+    font-size: 1.3rem;
+    letter-spacing: 0.071rem;
+    margin-bottom: 1.5rem;
+  }
+  section.professional .container .row .col-md-6 p {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+  }
+  section.professional .container .row .col-md-6 a {
+    text-decoration: none;
+    background: -webkit-gradient(linear, left top, right top, from(#27a2db), color-stop(11%, #27a2db), to(#f038c2));
+    background: linear-gradient(to right, #27a2db 0%, #27a2db 11%, #f038c2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.professional .container .row .col-md-6 .col-sm-6 {
+    margin-top: 2.5rem;
+  }
+  section.professional .container .row .col-md-6 .col-sm-6 img {
+    width: 100%;
+  }
+  section.ex .container {
+    height: 750px;
+    overflow: hidden;
+  }
+  section.ex .container h4 {
+    text-align: left;
+    font-size: 1.3rem;
+    letter-spacing: 0.08rem;
+    margin-bottom: 0rem;
+    width: 40%;
+  }
+  section.ex .container .col-md-4:nth-child(2),
+  section.ex .container .col-md-4:nth-child(3) {
+    display: block;
+  }
+  section.ex .container .col-md-4:nth-child(1) {
+    margin-top: 5rem;
+  }
+  section.ex .container .col-md-4:nth-child(2) {
+    margin-top: 2.5rem;
+  }
+  section.ex .container a {
+    bottom: 60px;
+    left: 44%;
+  }
+  section.full {
+    min-height: 200px;
+    background: url("../img/Jum_bg_large.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  section.full .container {
+    position: relative;
+    height: 200px;
+  }
+  section.full .container .box {
+    width: 60%;
+  }
+  section.get {
+    padding-top: 3rem;
+  }
 }
 
 @media (min-width: 992px) {
   header .navbar {
-    background: #1f1f1f;
+    background: rgba(31, 31, 31, 0);
   }
   .jumbotron {
     background: url("../img/Jum_bg_large.jpg");
@@ -549,11 +751,7 @@ footer.footer .container .row .col-md-6:nth-child(2) a {
             align-items: flex-start;
   }
   .jumbotron .box-1 h3 {
-    font-size: 4rem !important;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    margin-bottom: 1.5rem;
-    padding-top: 0.8rem;
+    font-size: 3.5rem !important;
   }
   .jumbotron .box-1 .box {
     display: inline-block;
@@ -648,7 +846,7 @@ footer.footer .container .row .col-md-6:nth-child(2) a {
     margin-bottom: 0rem;
   }
   section.professional .container .row .col-md-6 h4 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 0.3rem;
     margin-bottom: 2.5rem;
   }
@@ -670,7 +868,7 @@ footer.footer .container .row .col-md-6:nth-child(2) a {
     overflow: hidden;
   }
   section.ex .container h4 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 0.3rem;
     width: 50%;
   }
@@ -688,11 +886,15 @@ footer.footer .container .row .col-md-6:nth-child(2) a {
     left: 46%;
     bottom: 30px;
   }
+  section.full .container .box {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1200px) {
   header .navbar {
-    background: #1f1f1f;
+    background: rgba(31, 31, 31, 0);
   }
   .jumbotron {
     background: url("../img/Jum_bg_large.jpg");
@@ -841,6 +1043,7 @@ footer.footer .container .row .col-md-6:nth-child(2) a {
     font-size: 3rem;
     letter-spacing: 0.3rem;
     width: 50%;
+    margin-bottom: 1.5rem;
   }
   section.ex .container .col-md-4:nth-child(2),
   section.ex .container .col-md-4:nth-child(3) {
@@ -939,9 +1142,6 @@ footer.footer .container .row .col-md-6:nth-child(2) a {
     margin-bottom: 2.5rem;
     font-size: 2rem;
   }
-  section.full .container .box a:hover {
-    color: white;
-  }
   section.full::after {
     content: "";
     width: 100%;
@@ -965,6 +1165,9 @@ footer.footer .container .row .col-md-6:nth-child(2) a {
   section.get p,
   section.get a {
     font-size: 1.1rem;
+  }
+  section.get .col-md-5 {
+    margin-bottom: 0;
   }
   section.get .col-md-5 .box {
     width: 70%;
@@ -1033,18 +1236,18 @@ footer.footer .container .row .col-md-6:nth-child(2) a {
     margin-bottom: 2.5rem;
     width: 50%;
   }
-  footer.footer .container .row .col-md-6:nth-child(1) a {
+  footer.footer .container .row .col-md-6:nth-child(1) .link a {
+    display: inline-block;
     text-decoration: none;
     background: -webkit-gradient(linear, left top, right top, from(#27a2db), color-stop(11%, #27a2db), to(#f038c2));
     background: linear-gradient(to right, #27a2db 0%, #27a2db 11%, #f038c2 100%);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
   footer.footer .container .row .col-md-6:nth-child(2) {
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
   footer.footer .container .row .col-md-6:nth-child(2) h5 {
-    color: #494949;
     margin-bottom: 1.5rem;
     font-size: 1rem;
   }
